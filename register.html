@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+        <link href="/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <script src="/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>{hostname} XMPP Account Registrierung</title>
     </head>
 
@@ -36,25 +37,36 @@
         <style>
             div.wrapper {
                 display: flex;
-                height: 100vh;
-                width: 100vw;
+                height: 275px;
+                width: 275px;
                 justify-content: center;
                 align-items: center;
+
+            }
+            .btn-success {
+              color: white;
+              background-color: #5bc0de;
+              border-color: #5bc0de;
+              font-weight: 700;
+            }
+            .btn-success:hover,
+            .btn-success:focus,
+            .btn-success:active,
+            .btn-success.active,
+            .open .dropdown-toggle.btn-success {
+              color: white;
+              background-color: #428bca;
+              border-color: #428bca;
             }
         </style>
 
-    <div class="wrapper">
-        <div id="loginbox" style="min-width: 400px;">
-            <div class="panel panel-info" >
-                    <div class="panel-heading">
-                        <div class="panel-title">Registrieren</div>
-                    </div>
+        <div id="loginbox" style="width: 275px;">
 
-                    <div style="padding-top:30px" class="panel-body" >
+                    <div style="padding: 0px" class="panel-body" >
 
                         <h3 class="text-center text-danger">{notice}</h3>
 
-                        <form action="{path}" method="post" class="form-horizontal" role="form"  onSubmit="return checkPw(this)">
+                        <form action="" method="post" class="form-horizontal" role="form"  onSubmit="return checkPw(this)">
 
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -79,18 +91,16 @@
 
                                 <div style="margin-top:10px" class="form-group">
                                     <div class="col-sm-12 controls">
-                                      <input type="submit" value="Register" class="btn btn-success">
+                                      <input type="submit" value="Registrieren" class="btn btn-success">
 
                                     </div>
                                 </div>
                         </form>
                 </div>
-        </div>
 
         <!-- Datenschutz und Nutzungebdeingungen -->
-        <a href="https://trashserver.net/xmpp/datenschutz/" target="_blank">Datenschutz</a> | <a href="https://trashserver.net/xmpp/nutzungsbedingungen/" target="_blank">Nutzungsbedingungen</a>
+        <a href="https://www.pimux.de/page/datenschutz" target="_blank">Datenschutz</a> | <a href="https://www.pimux.de/page/nutzungsbedingungen" target="_blank">Nutzungsbedingungen</a>
 
-    </div>
-</div>
-  </body>
+        </div>
+    </body>
 </html>
